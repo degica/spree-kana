@@ -1,5 +1,5 @@
 Spree::Address.class_eval do
-  attr_accessible :firstnamekana, :lastnamekana
+  attr_accessible :firstnamekana, :lastnamekana, :department
 
   def active_merchant_hash
     {
@@ -7,6 +7,7 @@ Spree::Address.class_eval do
       :address1 => address1,
       :address2 => address2,
       :city => city,
+      :department => department,
       :state => state_text,
       :zip => zipcode,
       :country => country.try(:iso),
