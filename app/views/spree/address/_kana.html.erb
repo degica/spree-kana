@@ -81,6 +81,7 @@
       <%= form.phone_field :alternative_phone %>
     </p>
   <% end %>
+  <%= form.hidden_field :use_billing, value: 1 %>
 </div>
 <% else %>
   <%= render_original %>
